@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una carta digital para alguien especial">
+  <meta name="theme-color" content="#fdf6f0">
+
+  <title>Hay algo que quería decirte...</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== SCROLL PROGRESS ========== -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="hero">
+  <div class="hero__bg"></div>
+
+  <!-- Header Nav -->
+  <nav class="hero__nav">
+    <div class="hero__nav-container">
+      <div class="hero__brand">
+        <span class="hero__brand-heart">♥</span>
+        <span class="hero__brand-text" data-es="Una carta para ti" data-en="A letter for you">Una carta para ti</span>
+      </div>
+      <button class="hero__lang-btn" id="langBtn" aria-label="Switch to English">
+        <span class="hero__lang-flag">🇺🇸</span>
+        <span class="hero__lang-text">English</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="hero__content">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__overline reveal" data-es="Para ti KARINA" data-en="For you KARINA">Para ti KARINA</p>
+
+        <div class="hero__title-wrapper reveal">
+          <span class="hero__heart-deco" aria-hidden="true">♥</span>
+          <h1 class="hero__title" data-es="Hay algo que<br>quiero decirte..." data-en="There's something<br>I want to tell you...">Hay algo que<br>quiero decirte...</h1>
+          <span class="hero__heart-deco" aria-hidden="true">♥</span>
+        </div>
+
+        <p class="hero__subtitle reveal" data-es="A veces las palabras son difíciles de decir en persona,<br>así que decidí escribirlas aquí." data-en="Sometimes words are hard to say in person,<br>so I decided to write them here.">
+          A veces las palabras son difíciles de decir en persona,<br>
+          así que decidí escribirlas aquí.
+        </p>
+
+        <div class="hero__btns reveal">
+          <a href="#carta" class="hero__btn hero__btn--primary" id="scrollToCarta" data-es="Leer mi carta" data-en="Read my letter">
+            Leer mi carta
+          </a>
+          <a href="#tu-respuesta" class="hero__btn hero__btn--outline" data-es="Cómo funciona" data-en="How it works">
+            Responder
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__image reveal">
+        <img src="assets/images/logo.png" alt="Logo" class="hero__img">
+      </div>
+    </div>
+  </div>
+
+</header>
+
+  <!-- ========== MÚSICA ========== -->
+  <section class="section section--alt" id="musica">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="Una canción para esto" data-en="A song for this">Una canción para esto</h2>
+      <p class="section__desc reveal" data-es="Porque las palabras siempre suenan mejor con música de fondo." data-en="Because words always sound better with background music.">Porque las palabras siempre suenan mejor con música de fondo.</p>
+
+      <div class="player reveal">
+        <div class="player__cover">
+          <div class="player__cover-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="player__info">
+          <p class="player__title" id="playerTitle" data-es="Canciones para dedicar" data-en="Songs to dedicate">Hombre y Mujer</p>
+          <p class="player__desc" data-es="Coloca tu archivo .mp3 en <code>assets/music/</code>" data-en="Place your .mp3 file in <code>assets/music/</code>"><code></code></p>
+        </div>
+
+        <button class="player__btn" id="playerToggle" aria-label="Reproducir música">
+          <svg class="player__icon player__icon--play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <svg class="player__icon player__icon--pause" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ¿POR QUÉ ESTA PÁGINA? ========== -->
+  <section class="section" id="por-que">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="¿Por qué esto?" data-en="Why this?">¿Por qué esto?</h2>
+
+      <div class="cards-grid">
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-es="No es para impresionar" data-en="Not to impress">No es para impresionar</h3>
+          <p class="card__text" data-es="No busco deslumbrarte con grandes gestos. Solo quería encontrar una forma honesta de decir lo que siento." data-en="I'm not trying to dazzle you with grand gestures. I just wanted to find an honest way to say what I feel.">No busco deslumbrarte con grandes gestos. Solo quiero encontrar una forma honesta de decir lo que siento.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-es="No es para presionarte" data-en="Not to pressure you">No es para presionarte</h3>
+          <p class="card__text" data-es="No espero nada de ti. Esto no viene con condiciones ni expectativas. Solo quería ser sincero." data-en="I don't expect anything from you. This doesn't come with conditions or expectations. I just wanted to be honest.">No espero nada de ti. Esto no viene con condiciones ni expectativas. Solo quiero ser sincero.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-es="Solo es honestidad" data-en="Just honesty">Solo es honestidad</h3>
+          <p class="card__text" data-es="Hay cosas que merecen ser dichas. Y preferí hacerlo de la manera más auténtica que se me ocurrió." data-en="There are things that deserve to be said. And I preferred to do it in the most authentic way I could think of.">Hay cosas que merecen ser dichas. Y preferí hacerlo de la manera más auténtica que se me ocurrió.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LO QUE ME GUSTA DE TI ========== -->
+  <section class="section section--alt" id="me-gusta">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="Lo que me gusta de ti" data-en="What I like about you">Lo que me gusta de ti</h2>
+
+      <div class="traits-grid">
+        <article class="trait reveal">
+          <span class="trait__number">01</span>
+          <h3 class="trait__title" data-es="Tu forma de hablar" data-en="The way you talk">Tu forma de hablar</h3>
+          <p class="trait__text" data-es="Tienes una manera de expresarte que hace que cualquier conversación se sienta ligera y natural." data-en="You have a way of expressing yourself that makes any conversation feel light and natural.">Tu forma de hablar refleja la amabilidad y el compromiso que demuestras como conquistadora, inspirando a quienes comparten tiempo contigo.</p>
+        </article>
+
+        <article class="trait reveal">
+          <span class="trait__number">02</span>
+          <h3 class="trait__title" data-es="Tu manera de ver las cosas" data-en="Your way of seeing things">Tu manera de ver las cosas</h3>
+          <p class="trait__text" data-es="Me gusta tu perspectiva, esa forma única que tienes de mirar el mundo y compartirlo." data-en="I like your perspective, that unique way you have of looking at the world and sharing it.">Me gusta tu perspectiva, esa forma única que tienes de mirar el mundo y compartirlo.</p>
+        </article>
+
+        <article class="trait reveal">
+          <span class="trait__number">03</span>
+          <h3 class="trait__title" data-es="Tu personalidad" data-en="Your personality">Tu personalidad</h3>
+          <p class="trait__text" data-es="Hay una autenticidad en ti que es difícil de encontrar. Se nota en los pequeños detalles." data-en="There is an authenticity in you that is hard to find. It shows in the small details.">Hay una autenticidad en ti que es difícil de encontrar. Se nota en los pequeños detalles, como cuando en el campamento me llamaste para invitarme una chirimoya XD.</p>
+        </article>
+
+        <article class="trait reveal">
+          <span class="trait__number">04</span>
+          <h3 class="trait__title" data-es="La tranquilidad que transmites" data-en="The peace you transmit">La tranquilidad que transmites</h3>
+          <p class="trait__text" data-es="Estar cerca de ti tiene un efecto calmante. Es como si todo se sintiera más en orden." data-en="Being close to you has a calming effect. It's as if everything feels more in order.">Estar cerca de ti tiene un efecto calmante. Es como si todo se sintiera más en orden.</p>
+        </article>
+
+        <article class="trait reveal">
+          <span class="trait__number">05</span>
+          <h3 class="trait__title" data-es="Tu autenticidad" data-en="Your authenticity">Tu autenticidad</h3>
+          <p class="trait__text" data-es="No intentas ser quien no eres. Y eso, en un mundo lleno de máscaras, es increíblemente valioso." data-en="You don't try to be someone you're not. And that, in a world full of masks, is incredibly valuable.">No intentas ser quien no eres. Y eso, en un mundo lleno de máscaras, es increíblemente valioso.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CARTA ========== -->
+  <section class="section" id="carta">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="Mi carta para ti" data-en="My letter to you">Mi carta para ti</h2>
+
+      <div class="letter reveal" id="letter">
+        <button class="letter__toggle" id="letterToggle" aria-expanded="false">
+          <span class="letter__toggle-icon" aria-hidden="true">✉️</span>
+          <span class="letter__toggle-text">Abrir carta</span>
+        </button>
+
+        <div class="letter__content" id="letterContent" role="region" aria-labelledby="letterToggle">
+          <div class="letter__body">
+            <p class="letter__greeting" data-es="Querida [KARINA L]," data-en="Dear KARINA">Querida KARINA L.</p>
+
+            <p data-es="No es fácil escribir esto. No porque no sea sincero, sino porque hay sentimientos que se resisten a ser encajados en palabras. Pero aquí estoy, intentándolo." data-en="It's not easy to write this. Not because it isn't sincere, but because there are feelings that resist being boxed into words. But here I am, trying.">No es fácil escribir esto. No porque no sea sincero, sino porque hay sentimientos que se resisten a ser encajados en palabras. Pero aquí estoy, intentándolo.</p>
+
+            <p data-es="Me gustas. Quería decírtelo de frente, pero no quería que sonara apresurado ni ponerte en una situación incómoda. Así que elegí esto: una carta digital, un rincón tranquilo donde puedas leer esto cuando te sientas lista, sin presiones." data-en="I like you. I wanted to tell you in person, but I didn't want it to feel rushed or put you in an uncomfortable situation. So I chose this: a digital letter, a quiet corner where you can read this when you feel ready, without pressure.">Me gustas. Quería decírtelo de frente, pero no quería que sonara apresurado ni ponerte en una situación incómoda. Así que elegí esto: una carta digital, un rincón tranquilo donde puedas leer esto cuando te sientas lista, sin presiones.</p>
+
+            <p data-es="Disfruté la conversación que tuvimo en el campamento. Me gusta cómo cómo ves las cosas. Hay algo en ti que me hace querer saber más. No solo lo que te gusta o lo que haces sino quién eres realmente, qué te emociona, qué sueños guardas." data-en="I enjoy every conversation we have. I like how you think, how you see things. There is something about you that makes me want to know more. Not just what you like or what you do — but who you really are, what excites you, what dreams you hold.">Disfruté la conversación que tuvimos en el campamento. Me gusta cómo piensas, cómo ves las cosas. Hay algo en ti que me hace querer saber más. No solo lo que te gusta o lo que haces, sino quién eres realmente, qué te emociona, qué sueños guardas.</p>
+
+            <p data-es="No espero una respuesta inmediata. Esto no es una pregunta en vivo que requiera una reacción. Es simplemente una declaración honesta de alguien que está aprendiendo a conocer y que le gustaría seguir haciéndolo." data-en="I don't expect an immediate response. This isn't a live question that requires a reaction. It's simply an honest statement from someone who is learning to know you and would like to continue doing so.">No espero una respuesta inmediata. Esto no es una pregunta en vivo que requiera una reacción. Es simplemente una declaración honesta de alguien que está aprendiendo a conocer y que le gustaría seguir haciéndolo.</p>
+
+            <p data-es="Tal vez esto sea el inicio de algo. Tal vez solo sea una página bonita. Pero al menos quiero que sepas que hay alguien que te valora de una forma especial, y que quería que lo supieras." data-en="Maybe this is the beginning of something. Maybe it will just remain as a beautiful page. But at least I want you to know that there is someone who values you in a special way, and who wanted you to know it.">Tal vez esto sea el inicio de algo. Tal vez solo sea una página bonita. Pero al menos quiero que sepas que hay alguien que te valora de una forma especial, y que quería que lo supieras.</p>
+
+            <p class="letter__signature">Omar C. P.</p>
+          </div>
+
+          <button class="letter__close" id="letterClose" data-es="Cerrar carta" data-en="Close letter">Cerrar carta</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SI ALGUNA VEZ TE LO PREGUNTAS... ========== -->
+  <section class="section section--alt" id="preguntas">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="Si alguna vez te lo preguntas..." data-en="If you ever wonder...">Si alguna vez te lo preguntas...</h2>
+
+      <div class="accordion" role="tablist">
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger" role="tab" aria-expanded="false" aria-controls="faq1" id="faq1-trigger">
+            <span data-es="¿Por qué decidí hacer esto?" data-en="Why did I decide to do this?">¿Por qué decidí hacer esto?</span>
+            <svg class="accordion__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+          <div class="accordion__content" role="tabpanel" id="faq1" aria-labelledby="faq1-trigger">
+            <p data-es="Porque hay sentimientos que merecen ser expresados. Prefiero arriesgarme a ser vulnerable que quedarme con la duda de qué hubiera pasado. Creo que las cosas importantes merecen ser dichas, así sea de formas poco convencionales." data-en="Because there are feelings that deserve to be expressed. I prefer to risk being vulnerable than to stay with the doubt of what would have happened. I believe that important things deserve to be said, even if in unconventional ways.">Porque hay sentimientos que merecen ser expresados. Prefiero arriesgarme a ser vulnerable que quedarme con la duda de qué hubiera pasado. Creo que las cosas importantes merecen ser dichas, así sea de formas poco convencionales.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger" role="tab" aria-expanded="false" aria-controls="faq2" id="faq2-trigger">
+            <span data-es="¿Por qué una página web?" data-en="Why a website?">¿Por qué una página web?</span>
+            <svg class="accordion__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+          <div class="accordion__content" role="tabpanel" id="faq2" aria-labelledby="faq2-trigger">
+            <p data-es="Soy desarrollador web, así que esto es una extensión de quien soy. Queiero hacer algo que llevara mi esencia, que fuera personal y creativo. Además, una carta digital puede ser tan bonita y significativa como una física, solo que escrita con líneas de código en lugar de tinta." data-en="I'm a web developer, so this is an extension of who I am. I wanted to make something that carried my essence, that was personal and creative. Also, a digital letter can be as beautiful and meaningful as a physical one — just written with lines of code instead of ink.">Soy desarrollador web, así que esto es una extensión de quien soy. Quería hacer algo que llevara mi esencia, que fuera personal y creativo. Además, una carta digital puede ser tan bonita y significativa como una física — solo que escrita con líneas de código en lugar de tinta.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item reveal">
+          <button class="accordion__trigger" role="tab" aria-expanded="false" aria-controls="faq3" id="faq3-trigger">
+            <span data-es="¿Por qué ahora?" data-en="Why now?">¿Por qué ahora?</span>
+            <svg class="accordion__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+          <div class="accordion__content" role="tabpanel" id="faq3" aria-labelledby="faq3-trigger">
+            <p data-es="Porque sentí que era el momento. No hay un motivo espectacular. Simplemente supe que si no lo hacía ahora, probablemente no lo haría nunca. Y creo que algunas oportunidades solo aparecen una vez." data-en="Because I felt it was the moment. There is no spectacular reason. I simply knew that if I didn't do it now, I probably never would. And I believe some opportunities only appear once.">Porque sentí que era el momento. No hay un motivo espectacular. Simplemente supe que si no lo hacía ahora, probablemente no lo haría nunca. Y creo que algunas oportunidades solo aparecen una vez.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LO QUE ME GUSTARÍA ========== -->
+  <section class="section" id="me-gustaria">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="Lo que me gustaría" data-en="What I would like">Lo que me gustaría</h2>
+
+      <div class="wishes-grid">
+        <div class="wish reveal">
+          <div class="wish__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+          </div>
+          <p class="wish__text" data-es="Compartir más conversaciones como las que hemos tenido en el campamento" data-en="To share more conversations like the ones we've had">Compartir más conversaciones como las que hemos tenido en el campamento</p>
+        </div>
+
+        <div class="wish reveal">
+          <div class="wish__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M16 8h-6a2 2 0 00-2 2v4a2 2 0 002 2h6v-4h-2"/>
+            </svg>
+          </div>
+          <p class="wish__text" data-es="Conocer tus gustos, tu música, tus libros favoritos" data-en="To know your tastes, your music, your favorite books">Conocer tus gustos, tu música, tus libros favoritos</p>
+        </div>
+
+        <div class="wish reveal">
+          <div class="wish__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <p class="wish__text" data-es="Escuchar tus historias y lo que te hace feliz" data-en="To hear your stories and what makes you happy">Escuchar tus historias y lo que te hace feliz</p>
+        </div>
+
+        <div class="wish reveal">
+          <div class="wish__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <p class="wish__text" data-es="Crear recuerdos juntos, así sean pequeños" data-en="To create memories together, even small ones">Crear recuerdos juntos, así sean pequeños</p>
+        </div>
+
+        <div class="wish reveal">
+          <div class="wish__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <p class="wish__text" data-es="Descubrir si existe una conexión especial entre nosotros" data-en="To discover if there is a special connection between us">Descubrir si existe una conexión especial entre nosotros</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TU RESPUESTA ========== -->
+  <section class="section" id="tu-respuesta">
+    <div class="container">
+      <h2 class="section__title reveal" data-es="¿Quieres decir algo?" data-en="Do you want to say something?">¿Quieres decir algo?</h2>
+      <p class="section__desc reveal" data-es="Si te nace responder, aquí estoy para leerte." data-en="If you feel like replying, I'm here to read you.">Si te nace responder, aquí estoy para leerte.</p>
+
+      <form class="form reveal" id="responseForm" novalidate>
+        <div class="form__group">
+          <label for="name" class="form__label" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
+          <input type="text" id="name" class="form__input" placeholder="Escribe tu nombre aquí..." required autocomplete="name">
+        </div>
+
+        <div class="form__group">
+          <label for="message" class="form__label" data-es="Tu mensaje" data-en="Your message">Tu mensaje</label>
+          <textarea id="message" class="form__textarea" rows="4" placeholder="Escribe lo que quieras decir..." required></textarea>
+        </div>
+
+        <button type="submit" class="form__btn" data-es="Responder ❤️" data-en="Reply ❤️">
+          Responder
+          <span aria-hidden="true">❤️</span>
+        </button>
+
+        <p class="form__status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== MENSAJE FINAL ========== -->
+  <section class="section section--final" id="final">
+    <div class="final-bg"></div>
+    <div class="container">
+      <div class="final-message reveal">
+        <div class="final-message__ornament" aria-hidden="true">✦</div>
+        <p class="final-message__text" data-es="No sé qué pasará después de esto. Tal vez solo quede como una página bonita. Tal vez sea el inicio de algo más. Pero sentía que valía la pena decirte lo que siento." data-en="I don't know what will happen after this. Maybe it will just remain as a beautiful page. Maybe it will be the start of something more. But I felt it was worth telling you how I feel.">
+          No sé qué pasará después de esto. Tal vez solo quede como una página bonita.
+          Tal vez sea el inicio de algo más. Pero sentía que valía la pena decirte lo que siento.
+        </p>
+        <div class="final-message__ornament" aria-hidden="true">✦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__text" data-es="Las mejores historias suelen comenzar con una conversación." data-en="The best stories usually start with a conversation.">Las mejores historias suelen comenzar con una conversación.</p>
+      
+      <div class="footer__contact">
+        <a href="#tu-respuesta" class="footer__contact-link" data-es="✉️ Contacto" data-en="✉️ Contact">✉️ Contacto</a>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__bottom">
+        <p class="footer__small" data-es="Hecho con ❤️ desde el corazón" data-en="Made with ❤️ from the heart">Hecho con <span aria-hidden="true">❤️</span> desde el corazón</p>
+        <p class="footer__copy" data-es="&copy; 2026 Una carta para ti. Todos los derechos reservados." data-en="&copy; 2026 A letter for you. All rights reserved.">&copy; 2026 Una carta para ti. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
