@@ -13,7 +13,7 @@ const formattedUrl = SUPABASE_URL.replace(/\/rest\/v1\/?$/, '');
 
 // ─── CLIENTE SUPABASE ──────────────────────
 // Se inicializa automáticamente si editas las credenciales arriba
-const supabase = (window.supabase?.createClient && SUPABASE_URL !== 'https://TU_PROYECTO.supabase.co')
+const supabaseClient = (window.supabase?.createClient && SUPABASE_URL !== 'https://TU_PROYECTO.supabase.co')
   ? window.supabase.createClient(formattedUrl, SUPABASE_ANON_KEY)
   : null;
 
@@ -23,8 +23,8 @@ async function saveMessage(name, message) {
   if (!message?.trim()) throw new Error('El mensaje es obligatorio.');
 
   // Si ya configuraste tus credenciales reales, guarda en la base de datos de Supabase
-  if (supabase) {
-    const { error } = await supabase
+  if (supabaseClient) {
+    const { error } = await supabaseClient
       .from('messages')
       .insert({ name: name.trim(), message: message.trim() });
 
