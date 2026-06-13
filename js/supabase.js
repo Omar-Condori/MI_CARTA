@@ -29,7 +29,7 @@ async function saveMessage(name, message) {
       .insert({ name: name.trim(), message: message.trim() });
 
     if (error) throw error;
-    return { success: true };
+    return { success: true, isDemo: false };
   }
 
   // ─── DEMO / FALLBACK ───
@@ -40,5 +40,5 @@ async function saveMessage(name, message) {
   // Simula una pequeña demora de red
   await new Promise(resolve => setTimeout(resolve, 800));
 
-  return { success: true };
+  return { success: true, isDemo: true };
 }

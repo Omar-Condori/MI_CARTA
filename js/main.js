@@ -259,21 +259,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         // Llamar a la función preparada para Supabase
-        await saveMessage(name, message);
+        const result = await saveMessage(name, message);
 
         if (formStatus) {
-          formStatus.textContent = currentLang === 'es' ? 'Gracias por tu mensaje ❤️' : 'Thank you for your message ❤️';
-          formStatus.style.color = 'var(--color-rose-dark)';
+          if (result.isDemo) {
+            formStatus.textContent = currentLang === 'es' 
+              ? 'Tu mensaje se ha guardado (demo). Conecta Supabase para almacenamiento real.' 
+              : 'Your message has been saved (demo). Connect Supabase for real storage.';
+            formStatus.style.color = 'var(--color-text-light)';
+          } else {
+            formStatus.textContent = currentLang === 'es' ? 'Gracias por tu mensaje ❤️' : 'Thank you for your message ❤️';
+            formStatus.style.color = 'var(--color-rose-dark)';
+          }
         }
         responseForm.reset();
       } catch (error) {
+        console.error('Error al guardar mensaje:', error);
         if (formStatus) {
-          // La función actualmente simula éxito; cuando conectes Supabase
-          // esto manejará el error real
           formStatus.textContent = currentLang === 'es' 
-            ? 'Tu mensaje se ha guardado (demo). Conecta Supabase para almacenamiento real.' 
-            : 'Your message has been saved (demo). Connect Supabase for real storage.';
-          formStatus.style.color = 'var(--color-text-light)';
+            ? `Error: ${error.message || error}. Verifica RLS y la tabla en Supabase.` 
+            : `Error: ${error.message || error}. Check RLS and the table in Supabase.`;
+          formStatus.style.color = 'var(--color-rose-dark)';
         }
       } finally {
         if (submitBtn) submitBtn.disabled = false;
